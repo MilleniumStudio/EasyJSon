@@ -1,5 +1,12 @@
-/// Copyright 2015 hardcpp
-/// https://github.com/hardcpp/EasyJSon
+////////////////////////////////////////////////////////////////////////////////
+//
+//  MILLENIUM-STUDIO
+//  Copyright 2016 Millenium-studio SARL
+//  All Rights Reserved.
+//  https://github.com/hardcpp/EasyJSon
+//
+////////////////////////////////////////////////////////////////////////////////
+
 #pragma once
 #ifndef EASYJSON_HPP_INCLUDED
 #define EASYJSON_HPP_INCLUDED
@@ -49,7 +56,7 @@ namespace EasyJSon
             Node<StringAllocator> & operator[](const size_t & p_ID);
             /// Get sub node count if type == array || indexed_array
             /// @return Child count
-            const size_t Size()
+             size_t Size()
             {
                 return m_ChildNodes.size();
             }
