@@ -182,9 +182,9 @@ namespace EasyJSon
             for (typename std::map<StringAllocator, Node<StringAllocator>>::iterator l_It = m_ChildNodes.begin(); l_It != m_ChildNodes.end(); l_It++)
             {
                 if (l_It != m_ChildNodes.begin())
-                    l_Out << ",\n";
+                    l_Out << "," << (p_Pretty ? "\n" : "");
 
-                l_Out << std::string(p_Level + 1, '\t') << "\"" << l_It->first << "\": " << l_It->second.template Serialize<StringAllocatorStream>(p_Pretty, p_Level + 1);
+                l_Out << (p_Pretty ? std::string(p_Level + 1, '\t') : "") << "\"" << l_It->first << "\": " << l_It->second.template Serialize<StringAllocatorStream>(p_Pretty, p_Level + 1);
             }
 
             if (p_Pretty)
